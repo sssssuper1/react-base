@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+@import '~antd/dist/antd.css';
+/* reset */
+* { touch-action: none; }
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,ul,ol,li,p,blockquote,pre,hr,figure,table,caption,th,td,form,fieldset,legend,input,button,textarea,menu{margin:0;padding:0;}
+header,footer,section,article,aside,nav,hgroup,address,figure,figcaption,menu,details{display:block;}
+table{border-collapse:collapse;border-spacing:0;}
+caption,th{text-align:left;font-weight:normal;}
+html,body,fieldset,img,iframe,abbr{border:0;}
+i,cite,em,var,address,dfn{font-style:normal;}
+[hidefocus],summary{outline:0;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6,small{font-size:100%;}
+sup,sub{font-size:83%;}
+pre,code,kbd,samp{font-family:inherit;}
+q:before,q:after{content:none;}
+textarea{overflow:auto;resize:none;}
+label,summary{cursor:default;}
+a,button{cursor:pointer;}
+h1,h2,h3,h4,h5,h6,em,strong,b{font-weight:bold;}
+del,ins,u,s,a,a:hover{text-decoration:none;}
+body,textarea,input,button,select,keygen,legend{color:#333;outline:0;}
+body{background:#fff;}
+a,a:hover{color:#333;}
+a:focus{outline:none;}
+::-webkit-input-placeholder { /* WebKit browsers */
+  color: #c8c8c8;
+}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+  color: #eeeeee;
+}
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+  color: #eeeeee;
+}
+:-ms-input-placeholder { /* Internet Explorer 10+ */
+  color: #eeeeee;
+}
+input{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-modify: read-write-plaintext-only;
+}
+
+/* function */
+.f-cb:after,.f-cbli li:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}
+.f-cb,.f-cbli li{zoom:1;}
+
+/* common */
+
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: #f9f9f9;
+  color: #131313;
+}
