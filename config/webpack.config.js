@@ -312,6 +312,14 @@ module.exports = function (webpackEnv) {
       splitChunks: {
         chunks: 'all',
         name: false,
+        cacheGroups: {
+          styles: {
+            name: 'styles',
+            test: /\.(css|less)$/,
+            chunks: 'all',
+            enforce: true,
+          },
+        },
       },
       // Keep the runtime chunk separated to enable long term caching
       // https://twitter.com/wSokra/status/969679223278505985
@@ -488,20 +496,6 @@ module.exports = function (webpackEnv) {
               // See https://github.com/webpack/webpack/issues/6571
               sideEffects: true,
             },
-            // Adds support for CSS Modules (https://github.com/css-modules/css-modules)
-            // using the extension .module.css
-            {
-              test: cssModuleRegex,
-              use: getStyleLoaders({
-                importLoaders: 1,
-                sourceMap: isEnvProduction
-                  ? shouldUseSourceMap
-                  : isEnvDevelopment,
-                modules: {
-                  getLocalIdent: getCSSModuleLocalIdent,
-                },
-              }),
-            },
             {
               test: lessRegex,
               exclude: lessModuleRegex,
@@ -511,7 +505,6 @@ module.exports = function (webpackEnv) {
                 },
                 "less-loader"
               ),
-              sideEffects: true
             },
             {
               test: lessModuleRegex,
