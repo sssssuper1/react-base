@@ -6,7 +6,7 @@ const Header: React.FC = () => {
     <div className={styles.header}>
       <div className={styles.avater} />
       <div className={styles.description}>
-        <p>scalpel</p>
+        <p>scalpel..</p>
       </div>
     </div>
   );

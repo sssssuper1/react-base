@@ -66,6 +66,8 @@ module.exports = {
   theme: resolveApp('src/styles/theme.less'),
   appNodeModules: resolveApp('node_modules'),
   swSrc: resolveModule(resolveApp, 'src/service-worker'),
+  vendor: resolveApp('vendor'),
+  manifest: resolveApp('vendor/manifest.json'),
   publicUrlOrPath,
 };
 
