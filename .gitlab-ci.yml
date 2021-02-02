@@ -1,0 +1,17 @@
+stages:
+  - build
+
+before_script:
+  - echo "Before script section"
+
+after_script:
+  - echo "After script section"
+
+masterJob:
+  stage: build
+  before_script:
+    - echo "Before script in build stage that overwrited the globally defined before_script"
+  script:
+    - echo "build running"
+  after_script:
+    - echo "After script in build stage that overwrited the globally defined after_script"
